@@ -1,0 +1,327 @@
+/* New Hero Section Styles */
+.hero-new {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 40px 60px;
+    background: linear-gradient(135deg, #e8f4f8 0%, #f5f0ff 50%, #e6f9f5 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+body.dark-mode .hero-new {
+    background: linear-gradient(135deg, #1a2332 0%, #0f1419 50%, #1a2838 100%);
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    text-align: left;
+}
+
+.hero-content .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+body.dark-mode .hero-content .hero-title {
+    color: #ffffff;
+}
+
+.hero-content .hero-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+body.dark-mode .hero-content .hero-subtitle {
+    color: #b0b0b0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.trust-indicators {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #666;
+}
+
+body.dark-mode .trust-indicators {
+    color: #999;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Hero Visual - Animated Circles */
+.hero-visual {
+    position: relative;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-floating-data {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-anim-circle {
+    position: absolute;
+    border-radius: 50%;
+    animation: floatCircle 6s ease-in-out infinite;
+}
+
+.hero-anim-1 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(91, 155, 213, 0.3), rgba(197, 168, 232, 0.2));
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 0s;
+}
+
+.hero-anim-2 {
+    width: 220px;
+    height: 220px;
+    background: linear-gradient(135deg, rgba(126, 200, 200, 0.4), rgba(91, 155, 213, 0.3));
+    top: 30%;
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.hero-anim-3 {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, rgba(197, 168, 232, 0.4), rgba(126, 200, 200, 0.3));
+    bottom: 20%;
+    right: 25%;
+    animation-delay: 2s;
+}
+
+@keyframes floatCircle {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}
+
+.hero-anim-2 {
+    animation-name: floatCircle2;
+}
+
+@keyframes floatCircle2 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(15px, -20px);
+    }
+}
+
+.hero-anim-3 {
+    animation-name: floatCircle3;
+}
+
+@keyframes floatCircle3 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-10px, 15px);
+    }
+}
+
+/* Floating Data Cards */
+.float-data-card {
+    position: absolute;
+    background: white;
+    padding: 14px 18px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    min-width: 110px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 10;
+}
+
+body.dark-mode .float-data-card {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.float-data-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+.fdc-icon {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.fdc-value {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #5b9bd5;
+    line-height: 1.2;
+}
+
+body.dark-mode .fdc-value {
+    color: #5b9bd5;
+}
+
+.fdc-label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+    margin-top: 3px;
+}
+
+body.dark-mode .fdc-label {
+    color: #555;
+}
+
+/* Card Positions */
+.float-card-1 {
+    top: 15%;
+    left: 5%;
+    animation: floatCard1 4s ease-in-out infinite;
+}
+
+.float-card-2 {
+    top: 10%;
+    right: 10%;
+    animation: floatCard2 5s ease-in-out 0.5s infinite;
+}
+
+.float-card-3 {
+    bottom: 20%;
+    left: 10%;
+    animation: floatCard3 4.5s ease-in-out 1s infinite;
+}
+
+.float-card-4 {
+    bottom: 15%;
+    right: 5%;
+    animation: floatCard4 5.5s ease-in-out 0.3s infinite;
+}
+
+@keyframes floatCard1 {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes floatCard2 {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes floatCard3 {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-18px); }
+}
+
+@keyframes floatCard4 {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .hero-visual {
+        height: 350px;
+    }
+    
+    .hero-content .hero-title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-new {
+        padding: 80px 20px 40px;
+    }
+    
+    .hero-content .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-content .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .hero-visual {
+        height: 300px;
+    }
+    
+    .hero-anim-1 {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .hero-anim-2 {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .hero-anim-3 {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .float-data-card {
+        padding: 10px 12px;
+        min-width: 80px;
+    }
+    
+    .fdc-icon {
+        font-size: 16px;
+    }
+    
+    .fdc-value {
+        font-size: 18px;
+    }
+    
+    .fdc-label {
+        font-size: 10px;
+    }
+}
